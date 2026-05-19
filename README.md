@@ -91,7 +91,7 @@ expense-tracker/
 ## 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/your-username/expense-tracker.git
+git clone https://github.com/kjangid0211/expense-tracker.git
 ```
 
 ---
@@ -107,7 +107,7 @@ Create `.env` file:
 
 ```env
 PORT=5000
-MONGO_URI=your_mongodb_connection_string
+MONGO_URI=mongodb://localhost:27017/expense Tracker
 ```
 
 Run backend server:
@@ -128,15 +128,6 @@ npm run dev
 
 ---
 
-# 🔌 API Endpoints
-
-| Method | Endpoint | Description |
-|---|---|---|
-| GET | /api/transactions | Fetch all transactions |
-| POST | /api/transactions | Add new transaction |
-| DELETE | /api/transactions/:id | Delete transaction |
-
----
 
 # 🧠 Application Workflow
 
@@ -168,10 +159,6 @@ using all stored transaction records.
 
 ---
 
-# 📸 Screenshots
-
-## Dashboard
-(Add dashboard screenshot here)
 
 ## Add Transaction Form
 (Add form screenshot here)
