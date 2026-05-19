@@ -26,41 +26,6 @@ The project is built using the MERN stack:
 * Backend API with Express and MongoDB
 * Persistent data storage (data remains after refresh)
 
-
-📁Project Structure:
-expense-tracker/
-│
-├── client/ (Frontend - React)
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── Navbar.jsx
-│   │   │   ├── Dashboard.jsx
-│   │   │   ├── TransactionForm.jsx
-│   │   │   ├── TransactionList.jsx
-│   │   │   └── TransactionCard.jsx
-│   │   ├── pages/
-│   │   │   └── Home.jsx
-│   │   ├── services/
-│   │   │   └── api.js
-│   │   ├── styles/
-│   │   │   └── custom.css
-│   │   ├── App.jsx
-│   │   └── main.jsx
-│
-├── server/ (Backend - Node + Express)
-│   ├── models/
-│   │   └── Transaction.js
-│   ├── routes/
-│   │   └── transactionRoutes.js
-│   ├── controllers/
-│   │   └── transactionController.js
-│   ├── config/
-│   │   └── db.js
-│   ├── server.js
-│   └── .env
-│
-└── README.md
-
 Logic Explanation
 
 1️⃣ Adding Transaction
@@ -98,5 +63,12 @@ The dashboard shows:
 All values are calculated dynamically from database data.
 
 
-
-
+File Structure
+expense-tracker/
+│
+├── client/
+├── server/
+├── screenshots/
+├── README.md
+├── LICENSE
+└── .gitignore
