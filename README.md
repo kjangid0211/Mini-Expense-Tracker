@@ -1,74 +1,215 @@
-# Mini-Expense-Tracker
+# 💰 MERN Expense Tracker
 
-Project Overview
+A full-stack MERN application used to manage daily income and expense transactions.  
+The application allows users to add, view, and manage financial records with real-time balance calculations.
 
-The MERN Expense Tracker is a full-stack web application that helps users manage their daily income and expenses. Users can add, view, and track financial transactions, while the system automatically calculates total income, total expenses, and current balance.
+---
 
-The project is built using the MERN stack:
+# 🚀 Features
 
-* MongoDB for database
-* Express.js for backend API
-* React.js for frontend UI
-* Node.js for server runtime
+- Add Income Transactions
+- Add Expense Transactions
+- View Transaction History
+- Real-time Balance Calculation
+- Total Income & Expense Dashboard
+- Responsive UI using Bootstrap
+- MongoDB Database Integration
+- REST API with Express.js
+- Persistent Data Storage
 
-⸻
+---
 
-🎯 Project Features
+# 🛠️ Tech Stack
 
-* Add income and expense transactions
-* View all transactions in a list format
-* Delete transactions
-* Real-time calculation of:
-    * Total Income
-    * Total Expenses
-    * Balance
-* Clean and responsive UI using Bootstrap
-* Backend API with Express and MongoDB
-* Persistent data storage (data remains after refresh)
+## Frontend
+- React.js
+- Bootstrap
+- Axios
 
-Logic Explanation
+## Backend
+- Node.js
+- Express.js
 
-1️⃣ Adding Transaction
+## Database
+- MongoDB
+- Mongoose
 
-* User enters data in form
-* Data is sent to backend using Axios
-* Backend stores data in MongoDB
+---
 
-⸻
+# 📂 Project Structure
 
-2️⃣ Fetching Data
-
-* React calls GET API
-* Backend returns all transactions
-* UI displays list using map function
-
-⸻
-
-3️⃣ Calculations
-
-* Income = sum of all income transactions
-* Expense = sum of all expense transactions
-* Balance = Income - Expense
-
-⸻
-
-📊 Dashboard
-
-The dashboard shows:
-
-* Total Income (Green card)
-* Total Expenses (Red card)
-* Balance (Blue card)
-
-All values are calculated dynamically from database data.
-
-
-File Structure
+```txt
 expense-tracker/
 │
 ├── client/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── TransactionForm.jsx
+│   │   │   ├── TransactionList.jsx
+│   │   │   └── TransactionCard.jsx
+│   │   │
+│   │   ├── pages/
+│   │   │   └── Home.jsx
+│   │   │
+│   │   ├── services/
+│   │   │   └── api.js
+│   │   │
+│   │   ├── styles/
+│   │   │   └── custom.css
+│   │   │
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│
 ├── server/
+│   ├── config/
+│   │   └── db.js
+│   │
+│   ├── controllers/
+│   │   └── transactionController.js
+│   │
+│   ├── models/
+│   │   └── Transaction.js
+│   │
+│   ├── routes/
+│   │   └── transactionRoutes.js
+│   │
+│   ├── server.js
+│   └── .env
+│
 ├── screenshots/
 ├── README.md
 ├── LICENSE
 └── .gitignore
+```
+
+---
+
+# ⚙️ Installation & Setup
+
+## 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/your-username/expense-tracker.git
+```
+
+---
+
+## 2️⃣ Backend Setup
+
+```bash
+cd server
+npm install
+```
+
+Create `.env` file:
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+```
+
+Run backend server:
+
+```bash
+npm run dev
+```
+
+---
+
+## 3️⃣ Frontend Setup
+
+```bash
+cd client
+npm install
+npm run dev
+```
+
+---
+
+# 🔌 API Endpoints
+
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | /api/transactions | Fetch all transactions |
+| POST | /api/transactions | Add new transaction |
+| DELETE | /api/transactions/:id | Delete transaction |
+
+---
+
+# 🧠 Application Workflow
+
+```txt
+User fills transaction form
+          ↓
+React sends API request using Axios
+          ↓
+Express backend receives request
+          ↓
+MongoDB stores data
+          ↓
+Backend sends response
+          ↓
+Frontend updates UI automatically
+```
+
+---
+
+# 📊 Dashboard Calculations
+
+The dashboard automatically calculates:
+
+- Total Income
+- Total Expense
+- Current Balance
+
+using all stored transaction records.
+
+---
+
+# 📸 Screenshots
+
+## Dashboard
+(Add dashboard screenshot here)
+
+## Add Transaction Form
+(Add form screenshot here)
+
+## Transaction List
+(Add transaction list screenshot here)
+
+---
+
+# 🎯 Learning Outcomes
+
+This project demonstrates:
+
+- CRUD Operations
+- REST API Development
+- React State Management
+- Frontend & Backend Integration
+- MongoDB Database Operations
+- Responsive UI Design
+
+---
+
+# 🚀 Future Improvements
+
+- Edit Transaction
+- Search & Filter
+- Authentication System
+- Charts & Analytics
+- Monthly Reports
+
+---
+
+# 👨‍💻 Author
+
+Kartik Jangid
+
+---
+
+# 📜 License
+
+This project is licensed under the MIT License.
